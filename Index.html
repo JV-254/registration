@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h1>Welcome to Tech Innovators Conference 2026</h1>
+    <a href="Index.html">Home</a>
+    <a href="confirmation.html">Registration Summary</a>
+    <form method="POST" onsubmit="confirmation(event)">
+        <fieldset style="width: 400px;">
+            <legend>Attendee Details</legend>
+            <label for="name">Full Name</label><br>
+            <input type="text" id="name" required><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" required><br>
+            <label for="number">Phone Number</label><br>
+            <input type="tel" id="number"><br>
+            <label for="date">Date of Registration</label><br>
+            <input type="date" id="date"><br><br>
+            <label for="depertment">Depertment Section</label><br>
+            <select name="depertment" id="depertment">
+                <option value="software">Software Engineering</option>
+                <option value="artificial">Artificial Intelligence</option>
+                <option value="data">Data Science</option>
+                <option value="cyber">Cyber Security</option>
+            </select><br><br>
+            <label for="workshop">Workshop Selection</label><br>
+            <select name="workshop" id="workshop">
+                <option value="AI">AI Ethics</option>
+                <option value="Web3">Web3 Development</option>
+                <option value="cloud">Cloud Computing</option>
+                <option value="UI/UX">UI/UX Design</option>
+            </select>
+        </fieldset><br>
+        <fieldset>
+            <legend>Conference Roles</legend>
+            <label for="chairPerson">Conference ChairPerson</label><br>
+            <select name="chairperson" id="chairperson">
+                <option value="Dr.Kamau">Dr.Kamau</option>
+                <option value="prof.Amina">Prof.Amina</option>
+                <option value="Mr.Otieno">Mr.Otieno</option>
+            </select><br><br>
+            <label for="secretary">Conference Secretary</label><br>
+            <select name="secretary" id="secretary">
+                <option value="linda">Linda</option>
+                <option value="Grace">Grace</option>
+                <option value="Collins">Collins</option>
+            </select><br><br>
+            <input type="checkbox" id="accept">
+            <label for="accept">I accept conference regulations</label><br><br>
+            <button onclick="confirmation()" action="confirmation.html">Register</button>
+        </fieldset>
+    </form>
+    <script>
+        function confirmation(event){
+            event.preventDefault();
+            alert("Registration Submitted Successfully!");
+            window.location.href="confirmation.html";
+        }
+    </script>
+</body>
+</html>
